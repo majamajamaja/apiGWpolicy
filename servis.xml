@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<l7:Bundle xmlns:l7="http://ns.l7tech.com/2010/04/gateway-management">
+    <l7:References>
+        <l7:Item>
+            <l7:Name>test</l7:Name>
+            <l7:Id>42da197e663d36875d374285ec269988</l7:Id>
+            <l7:Type>SERVICE</l7:Type>
+            <l7:TimeStamp>2018-11-29T14:47:12.223+01:00</l7:TimeStamp>
+            <l7:Resource>
+                <l7:Service id="42da197e663d36875d374285ec269988" version="2">
+                    <l7:ServiceDetail folderId="0000000000000000ffffffffffffec76" id="42da197e663d36875d374285ec269988" version="2">
+                        <l7:Name>test</l7:Name>
+                        <l7:Enabled>$#{template.service.test.ServiceDetail.Enabled}#</l7:Enabled>
+                        <l7:ServiceMappings>
+                            <l7:HttpMapping>
+                                <l7:UrlPattern>$#{template.service.test.ServiceDetail.ServiceMappings.HttpMapping.UrlPattern}#</l7:UrlPattern>
+                                <l7:Verbs>
+                                    <l7:Verb>$#{template.service.test.ServiceDetail.ServiceMappings.HttpMapping.Verbs.1.Verb}#</l7:Verb>
+                                    <l7:Verb>$#{template.service.test.ServiceDetail.ServiceMappings.HttpMapping.Verbs.2.Verb}#</l7:Verb>
+                                    <l7:Verb>$#{template.service.test.ServiceDetail.ServiceMappings.HttpMapping.Verbs.3.Verb}#</l7:Verb>
+                                    <l7:Verb>$#{template.service.test.ServiceDetail.ServiceMappings.HttpMapping.Verbs.4.Verb}#</l7:Verb>
+                                </l7:Verbs>
+                            </l7:HttpMapping>
+                        </l7:ServiceMappings>
+                        <l7:Properties>
+                            <l7:Property key="internal">
+                                <l7:BooleanValue>$#{template.service.test.ServiceDetail.Properties.internal.BooleanValue}#</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="policyRevision">
+                                <l7:LongValue>$#{template.service.test.ServiceDetail.Properties.policyRevision.LongValue}#</l7:LongValue>
+                            </l7:Property>
+                            <l7:Property key="soap">
+                                <l7:BooleanValue>$#{template.service.test.ServiceDetail.Properties.soap.BooleanValue}#</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="tracingEnabled">
+                                <l7:BooleanValue>$#{template.service.test.ServiceDetail.Properties.tracingEnabled.BooleanValue}#</l7:BooleanValue>
+                            </l7:Property>
+                            <l7:Property key="wssProcessingEnabled">
+                                <l7:BooleanValue>$#{template.service.test.ServiceDetail.Properties.wssProcessingEnabled.BooleanValue}#</l7:BooleanValue>
+                            </l7:Property>
+                        </l7:Properties>
+                    </l7:ServiceDetail>
+                    <l7:Resources>
+                        <l7:ResourceSet tag="policy">
+                            <l7:Resource type="policy" version="2">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;wsp:Policy xmlns:L7p="http://www.layer7tech.com/ws/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2002/12/policy"&gt;
+    &lt;wsp:All wsp:Usage="Required"&gt;
+        &lt;L7p:CommentAssertion&gt;
+            &lt;L7p:Comment stringValue="$#{template.service.test.Resources.ResourceSet.xml.All.CommentAssertion.CommentAssertion.Comment.stringValue}#"/&gt;
+        &lt;/L7p:CommentAssertion&gt;
+        &lt;L7p:CodeInjectionProtectionAssertion&gt;
+            &lt;L7p:IncludeUrlPath booleanValue="$#{template.service.test.Resources.ResourceSet.xml.All.CodeInjectionProtectionAssertion.CodeInjectionProtectionAssertion.IncludeUrlPath.booleanValue}#"/&gt;
+            &lt;L7p:Protections codeInjectionProtectionTypeArray="included"&gt;
+                &lt;L7p:item protectionType="$#{template.service.test.Resources.ResourceSet.xml.All.CodeInjectionProtectionAssertion.Protections.htmlJavaScriptInjection.Protections.item.protectionType}#"/&gt;
+                &lt;L7p:item protectionType="$#{template.service.test.Resources.ResourceSet.xml.All.CodeInjectionProtectionAssertion.Protections.hexEncodedInjection.Protections.item.protectionType}#"/&gt;
+                &lt;L7p:item protectionType="$#{template.service.test.Resources.ResourceSet.xml.All.CodeInjectionProtectionAssertion.Protections.phpEvalInjection.Protections.item.protectionType}#"/&gt;
+                &lt;L7p:item protectionType="$#{template.service.test.Resources.ResourceSet.xml.All.CodeInjectionProtectionAssertion.Protections.shellInjection.Protections.item.protectionType}#"/&gt;
+                &lt;L7p:item protectionType="$#{template.service.test.Resources.ResourceSet.xml.All.CodeInjectionProtectionAssertion.Protections.ldapDnInjection.Protections.item.protectionType}#"/&gt;
+                &lt;L7p:item protectionType="$#{template.service.test.Resources.ResourceSet.xml.All.CodeInjectionProtectionAssertion.Protections.ldapSearchInjection.Protections.item.protectionType}#"/&gt;
+                &lt;L7p:item protectionType="$#{template.service.test.Resources.ResourceSet.xml.All.CodeInjectionProtectionAssertion.Protections.xpathInjection.Protections.item.protectionType}#"/&gt;
+            &lt;/L7p:Protections&gt;
+            &lt;L7p:Target target="$#{template.service.test.Resources.ResourceSet.xml.All.CodeInjectionProtectionAssertion.CodeInjectionProtectionAssertion.Target.target}#"/&gt;
+        &lt;/L7p:CodeInjectionProtectionAssertion&gt;
+        &lt;L7p:SqlAttackProtection&gt;
+            &lt;L7p:IncludeUrlPath booleanValue="$#{template.service.test.Resources.ResourceSet.xml.All.SqlAttackProtection.SqlAttackProtection.IncludeUrlPath.booleanValue}#"/&gt;
+            &lt;L7p:IncludeUrlQueryString booleanValue="$#{template.service.test.Resources.ResourceSet.xml.All.SqlAttackProtection.SqlAttackProtection.IncludeUrlQueryString.booleanValue}#"/&gt;
+            &lt;L7p:Protections stringSetValue="included"&gt;
+                &lt;L7p:item stringValue="$#{template.service.test.Resources.ResourceSet.xml.All.SqlAttackProtection.Protections.OraSql.Protections.item.stringValue}#"/&gt;
+                &lt;L7p:item stringValue="$#{template.service.test.Resources.ResourceSet.xml.All.SqlAttackProtection.Protections.MsSql.Protections.item.stringValue}#"/&gt;
+            &lt;/L7p:Protections&gt;
+        &lt;/L7p:SqlAttackProtection&gt;
+        &lt;L7p:HardcodedResponse&gt;
+            &lt;L7p:Base64ResponseBody stringValue="$#{template.service.test.Resources.ResourceSet.xml.All.HardcodedResponse.HardcodedResponse.Base64ResponseBody.stringValue}#"/&gt;
+        &lt;/L7p:HardcodedResponse&gt;
+    &lt;/wsp:All&gt;
+&lt;/wsp:Policy&gt;
+</l7:Resource>
+                        </l7:ResourceSet>
+                    </l7:Resources>
+                </l7:Service>
+            </l7:Resource>
+        </l7:Item>
+    </l7:References>
+    <l7:Mappings>
+        <l7:Mapping action="NewOrExisting" srcId="0000000000000000ffffffffffffec76" srcUri="https://192.168.89.207:8443/restman/1.0/folders/0000000000000000ffffffffffffec76" type="FOLDER">
+            <l7:Properties>
+                <l7:Property key="FailOnNew">
+                    <l7:BooleanValue>true</l7:BooleanValue>
+                </l7:Property>
+            </l7:Properties>
+        </l7:Mapping>
+        <l7:Mapping action="NewOrExisting" srcId="42da197e663d36875d374285ec269988" srcUri="https://192.168.89.207:8443/restman/1.0/services/42da197e663d36875d374285ec269988" type="SERVICE"/>
+    </l7:Mappings>
+</l7:Bundle>

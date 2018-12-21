@@ -1,0 +1,11 @@
+ <l7:ServiceMappings>
+                            <l7:HttpMapping>
+                                <l7:UrlPattern>$#{template.service.test.ServiceDetail.ServiceMappings.HttpMapping.UrlPattern}#</l7:UrlPattern>
+                                <l7:Verbs>
+                                    <l7:Verb>$#{template.service.test.ServiceDetail.ServiceMappings.HttpMapping.Verbs.1.Verb}#</l7:Verb>
+                                    <l7:Verb>$#{template.service.test.ServiceDetail.ServiceMappings.HttpMapping.Verbs.2.Verb}#</l7:Verb>
+                                    <l7:Verb>$#{template.service.test.ServiceDetail.ServiceMappings.HttpMapping.Verbs.3.Verb}#</l7:Verb>
+                                    <l7:Verb>$#{template.service.test.ServiceDetail.ServiceMappings.HttpMapping.Verbs.4.Verb}#</l7:Verb>
+                                </l7:Verbs>
+                            </l7:HttpMapping>
+                        </l7:ServiceMappings>
